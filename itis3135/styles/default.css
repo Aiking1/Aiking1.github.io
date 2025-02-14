@@ -1,7 +1,52 @@
-body{
-    color: burlywood;
-    background-color: black;
+* {
+    box-sizing: border-box;
+    background-color: #091f36;
 }
+#a0d2eb
+header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #6b7a8f;
+    color: #fff;
+    border-bottom: 4px solid #f7882f;
+  }
+
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #f7882f;
+    background-color: #091f36;
+}
+
+
 h1, h2{
     text-align: center;
 }
+
+footer {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 14px;
+
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+  }
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: brown;
+  }
+  
+  a:active {
+    color: brown;
+  }
