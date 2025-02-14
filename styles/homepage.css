@@ -1,0 +1,41 @@
+* {
+background-color: #3d3d3f;
+color: #7dce94;
+
+}
+
+header {
+ text-transform: uppercase;
+ align-items: flex-end;
+ padding: 10px;
+ border-bottom: 4px solid #fff;
+}
+
+body {
+ font-family: tahoma;
+ border-bottom: 4px solid #c5c6d0;
+
+}
+
+footer {
+    text-align: center;
+    font-size: 15px;
+    justify-content: space-evenly; 
+    border-bottom: 4px solid #fff;
+}
+
+a {
+    color:#c4c4c6;
+  }
+  
+  a:visited {
+    color: #9f33d6;
+  }
+  
+  a:hover {
+    color: #feda6a;
+  }
+  
+  a:active {
+    color: rgb(47, 12, 223);
+  }
