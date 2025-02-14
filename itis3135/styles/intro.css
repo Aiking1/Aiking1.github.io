@@ -1,0 +1,25 @@
+
+
+    
+    header {
+     text-transform: uppercase;
+     align-items: flex-end;
+     padding: 10px;
+    }
+    
+    body {
+     font-family: tahoma;
+     border-bottom: 4px solid #c5c6d0;
+     justify-content: space-evenly;
+     border-bottom: 4px solid #000000;
+     background-color: #fff;
+    color: #7dce94;   
+    }
+    
+    
+
+a {
+    text-align: center;
+    color:#1616f4;
+  }
+  
