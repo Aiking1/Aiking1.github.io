@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-color:#1d1e22 ;
+    background-color:#3d3f48 ;
 }
 
 
@@ -19,7 +19,7 @@ header {
   }
 
   header nav {
-    display: flex;
+    
     justify-content: space-between;
     align-items: flex-end;
     
@@ -35,6 +35,7 @@ body{
 
 nav section {
   margin-bottom: 10px;
+  color: #fff;
 }
 
 
