@@ -6,13 +6,14 @@
 
 header {
     text-transform: uppercase;
-    align-items: center; 
+    text-align: center; 
     padding: 15px 32px;
     color: #fff;
     border-bottom: 4px solid #c5c6d0; 
   }
 
-  .h1 {
+  h1 {
+    text-align: center;
     margin-bottom: 10px; 
 
   }
