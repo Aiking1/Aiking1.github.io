@@ -1,8 +1,4 @@
-* {
-background-color: #3d3d3f;
-color: #7dce94;
 
-}
 
 header {
  text-transform: uppercase;
@@ -14,6 +10,8 @@ header {
 body {
  font-family: tahoma;
  border-bottom: 4px solid #c5c6d0;
+ background-color: #3d3d3f;
+color: #7dce94;
 
 }
 

@@ -5,6 +5,7 @@ body {
     border-bottom: solid 400px orange;
     border-left: solid 10px blue;
     border-right: solid 69px green;
+    max-width: max-content;
 
 }
 

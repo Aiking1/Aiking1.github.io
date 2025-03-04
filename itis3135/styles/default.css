@@ -27,6 +27,7 @@ body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: #a0d2eb;
     background-color:#3d3f48 ;
+    max-width: max-content;
 }
 
 nav section {
