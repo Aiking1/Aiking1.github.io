@@ -1,0 +1,41 @@
+body {
+    background: white;
+    color: black;
+    border-top: solid 40px black;
+    border-bottom: solid 400px orange;
+    border-left: solid 10px blue;
+    border-right: solid 69px green;
+
+}
+
+ul {
+    align-items: center;
+
+}
+
+h3 h5 h4 {
+    font-family: Papyrus, fantasy;
+    text-decoration: underline;
+
+}
+
+h1 h2 h6 {
+    font-family: Comic Sans;
+    border-radius: 20 20 50 50;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+    font-size: 50px;
+    top: 50;
+}
+
+p:last-of-type {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+ul {
+    align-items: center;
+}
