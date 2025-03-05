@@ -1,71 +1,95 @@
+body {
+  background: #3d3f48;
+  color: #a0d2eb;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 header {
-    text-transform: uppercase;
-    text-align: center; 
-    padding: 15px 32px;
-    color: #fff;
-    border-bottom: 4px solid #c5c6d0; 
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 10px; 
-
-  }
-
-  header nav {
-    
-    justify-content: space-between;
-    align-items: flex-end;
-    
-
-  }
-
-
-body{ 
-     box-sizing: border-box;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: #a0d2eb;
-    background-color:#3d3f48 ;
-    max-width: max-content;
-}
-
-nav section {
-  margin-bottom: 10px;
+  background: #000;
   color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 32px;
+  border-bottom: 4px solid #c5c6d0;
 }
 
-
- h2{
-    text-align: center;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 footer {
-    text-transform: capitalize;
-    font-size: 14px;
-    color: #ff7700;
-        padding-top: 15px;
-        font-family: monospace;
-        text-align: end;
-       }
-
-
-.address {
-    margin-bottom: 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #ff7700;
+  font-family: monospace;
+  text-align: right;
+  padding-top: 15px;
 }
 
 a {
-    color:#fff;
+  color: #fff;
+}
+a:visited {
+  color: #1b58e7;
+}
+a:hover {
+  color: #feda6a;
+}
+a:active {
+  color: rgb(47, 12, 223);
+}
+
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+  main {
+      width: 85%;
   }
-  
-  a:visited {
-    color: #1b58e7;
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+  main {
+      width: 95%;
   }
-  
-  a:hover {
-    color: #feda6a;
+  nav {
+      flex-direction: column;
+      align-items: center;
   }
-  
-  a:active {
-    color: rgb(47, 12, 223);
+  footer {
+      text-align: center;
   }
+}
+
+@media screen and (min-width: 370px) and (max-width: 600px) {
+  main {
+      width: 100%;
+      padding: 10px;
+  }
+  h1 {
+      font-size: 1.5rem;
+  }
+  nav {
+      flex-direction: column;
+      text-align: center;
+  }
+  footer {
+      font-size: 12px;
+      text-align: center;
+  }
+}
