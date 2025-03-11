@@ -8,16 +8,113 @@
         body {
             background-color: rgb(purple, orange, white);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
         }
+        ul {
+            padding-left: 25px; 
+            margin: 20px 0;
+            text-align: left;     
+            list-style-type: disc; 
+        }
+
+        li {
+            margin: 10px 0;
+            padding-left: 1.2em;
+            text-indent: 0; 
+        }
+        ol {
+            text-align: left;
+        }
+
+
+        header, footer {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        main {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px 0;
+            display: none; 
+        }
+
+        .active {
+            display: block;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 350px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: #e71b1bc5;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer img {
+            width: 40px;
+            height: auto;
+            margin: 5px;
+        }
+
+        footer a {
+            color: white;
+        
+        
+        }
+        footer div a{
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #e4d01a;
+            text-align: center;
+        }
+
     </style>
 </head>
-<body>
-<h1>Big Game Hunting</h1>
-    <main>
-        <div data-include="components/header.html"></div>
-
-
-        <!--
+<body>  
+     <header>
+     <!--
         TODO:
         nav bar exist, with icon to divide the links
         -->
@@ -25,8 +122,29 @@
         <!--
         When section is piceked all the others are hidded and cant be seen by user until something else is clicked
         -->
+  
+        <h1>Big Game Hunting</h1>
+        <div data-include="components/header.html"></div>
+        <nav aria-label="Main navigation">
+            <a href="#what" class="nav-link" data-section="what">What's a hunter</a>
+            <a href="#who" class="nav-link" data-section="who">The History, Culture, and Legacy of Big Game Hunts</a>
+            <a href="#when" class="nav-link" data-section="when">When to Hunt</a>
+            <a href="#where" class="nav-link" data-section="where">Best Locations for hunting</a>
+            <a href="#how" class="nav-link" data-section="how">So how does it all work?</a>
+            <a href="#why" class="nav-link" data-section="why">What's in it for me</a>
+            <a href="#more" class="nav-link" data-section="more">More information</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+
+      
 
         <!-- <h2> what  </h2> -->
+         <section id="what" class="active">
         <h2>What does a Big game Hunter look like?</h2>
         <figure>
         <img src="/itis3135/hobby/images/young-women-hunter.jpeg" alt="Young women and her father hunting with crossbow">
@@ -46,9 +164,10 @@
             </p>
 
             <p>Both male and female, young and old, in shape or out, any and all nationally and race.</p>
-
+    </section>  
         <!-- Section Who -->
 
+    <section id="Who">
         <h2>The History, Culture, and Legacy of Big Game Hunts</h2>
          <!-- h2 tag telling the purpose of who 3 things one with a figure  -->
 
@@ -64,9 +183,10 @@
             <figcaption>A "big game kill" typically referred to the hunting and killing of large, dangerous animals like elephants, lions, buffalo, rhinoceroses, and bears—animals that posed a challenge due to their size, strength, and the skill required to hunt them. These animals were often seen as the pinnacle of hunting achievement.</figcaption>
         </figure>
 
-
+    </section>
 
         <!-- Section When -->
+    <section id="when">
          <h2>When to Hunt</h2>
         <!-- h2 tag telling the user the  purpose of this section include 3 things with one with one being fig -->
 
@@ -76,7 +196,23 @@
             Where are you - It's important that local and national law is being followed to avoid illegal hunts, fines, and criminal prosecution.
             Plans after - Making sure you have proper time get in place, setup and tear down. Also considering equipment  to transport the game, and yourself safety.  enough time
         </p>
+
+        <p> When you have made tthe proper preparation and are ready to go hunting.
+            <ul>
+                <li><strong>Twilight, Sunrise, &amp; Sunset</strong> - These are the feeding and movement times for many species. Around 30 minutes before sunrise and 30 minutes after sunset.</li>
+                <li><strong>Weather</strong> - Windy conditions can affect your shot and make hunting more difficult. Scent detection can also pay apart making it either easier or harder depending on circumstances. 
+                Fronts - Most animals are more active before and after cold front to prepare for the weather or come out and look for food.
+                </li>
+                <li><strong>Moon Phases</strong> - Full moons often lead to more nighttime activity, while new moons may result in animals being more active during daylight hours.</li>
+                <li><strong>Post Strom</strong> -  Animals tend to be more active after a storm or a heavy rain, as they come out to forage.
+                </li>
+            </ul>
+        </p>
+
+    </section>
+
         <!-- Section Where -->
+    <section id="where">
          <h2>Best Locations for hunting</h2>
          <!--  h2 tag telling the user the  purpose of this section include 3 things with one with one being fig -->
            <p>Hunting takes place all over the world happening, not limited to the type of hunt thats being done</p>
@@ -96,11 +232,12 @@
             <img src="/itis3135/hobby/images/alberta.jpg" alt="Alberta scenery">
             <figcaption>The Alberta landscape serves as a santuary for many different types of animals because of the vast waters, dense forests and mix of highland and valley.</figcaption>
            </figure>
-
+    </section>
 
         <!-- Section how -->
         <!-- h2 tag telling the user the  purpose of this section include 3 things with one with one being fig -->
-           <h2>So how does it all work?</h2>
+    <section id="how">
+        <h2>So how does it all work?</h2>
            
            <figure>
             <img src="/itis3135/hobby/images/Black-huntersyn-2.jpg" alt="Young man Hunting in Washington, U.S.A." style="width: max-content;">
@@ -111,11 +248,11 @@
            <p>Hunting is a require taste sport and it not for everyone. It requires a weapon normal something like a crossbow, rifle.</p>
            <p>Additional hunting accessories include things like a range finder, scope for the weapon normally going on rifles, some people use beams to get on target, caliber in the weapon is something to consider also.</p>
            
-           
+    </section>       
            <!-- Section Why -->
         <!-- h2 tag telling the user the  purpose of this section include 3 things with one with one being fig -->
            <h2>What's in it for me</h2>
-
+           <section id="why">
            <figure>
             <img src="/itis3135/hobby/images/youthunt.jpg" alt="3 Generations of Hunters." style="width: max-content;">
             <figcaption>Early morning scroll for three generations of hunters. Hunters often enjoy bring others into the sport and introducing children, grandchildren and family into shooting and the sport.</figcaption>
@@ -125,6 +262,10 @@
            <p>Unlike some other sports and or hobbies like weightlifting, tennis and running there isnt not physical wear on your body meaning you can never age out of the sport.</p>
            <p>One big myth that people fall victim to is people who hunt is contributing to animal crutuality. In reality it is the complete opposite, instead hunters help with natures inbalances and over population of certain animals. Some animals that can be consider dangerous and invasive, hunters help fight and dprevent this..</p>
 
+
+    </section>  
+    
+    <section id="more">
           <h2>Interested, want to learn more?</h2>
           <p>  If interested in learning more about hunting or planning for the sport, you can inquire more below.</p>
         
@@ -134,13 +275,29 @@
             <li><a href="https://www.hunter-ed.com/">Hunter-ed</a></li>
           </ul>
 
+</section>
 
     </main>
 
     <footer>
+       
         <div data-include="components/footer.html"></div>
+    
 
     </footer>
-    
+
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script>
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                document.querySelectorAll('section').forEach((section) => {
+                    section.classList.remove('active');
+                });
+                const sectionToShow = document.querySelector(this.getAttribute('href'));
+                sectionToShow.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
