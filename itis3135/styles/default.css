@@ -57,6 +57,14 @@ a:active {
   color: rgb(47, 12, 223);
 }
 
+img{
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90px;
+}
+
 @media screen and (min-width: 981px) and (max-width: 1400px) {
   main {
       width: 85%;
