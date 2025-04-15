@@ -139,12 +139,10 @@ table {
   .styled-table {
     border-collapse: collapse;
     width: 100%;
-    border: 2px solid black;
   }
   
   .styled-table th,
   .styled-table td {
-    border: 2px solid black;
     padding: 8px 12px;
     text-align: left;
   }
