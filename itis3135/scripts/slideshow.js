@@ -1,31 +1,36 @@
+
+
+
+
 let slideIndex = 1;
-showSlides(slideIndex);
+
+const showSlides = function(n) {
+    const slides = $(".slides");
+    const thumbnails = $(".demo");
+  
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+  
+    slides.hide();
+    thumbnails.removeClass("active");
+  
+    $(slides[slideIndex - 1]).show();
+    $(thumbnails[slideIndex - 1]).addClass("active");
+  };
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+    showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
+$(document).ready(function() {
+    showSlides(slideIndex);
 
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = slides[slideIndex - 1].querySelector("figcaption").textContent;
-}
+    // Optional: Auto advance
+    setInterval(function () {
+        plusSlides(1);
+    }, 7000);
+});
