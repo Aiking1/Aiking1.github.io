@@ -1,7 +1,7 @@
 
 
 body {
-    background: #272932;
+    background: #2d4059;
     color: #34495e;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
@@ -12,8 +12,8 @@ body {
   }
   
   main {
-    background: #f1f2eb;
-    color: #33495e;
+    background: #f8f8f8;
+    color: #34495e;
     text-align: left;
     width: 90%;
     max-width: 1200px;
@@ -22,8 +22,8 @@ body {
   }
   
   header, h3 {
-    background: #272932;
-    color: #f6cba2;
+    background: #2d4059;
+    color: #ff7700;
     text-transform: uppercase;
     text-align: center;
     padding: 15px 32px;
@@ -45,6 +45,19 @@ body {
     font-family: monospace;
     text-align: right;
     padding-top: 15px;
+  }
+
+  a {
+    color: #f67723;
+  }
+  a:visited {
+    color: #edeff2;
+  }
+  a:hover {
+    color: #f80404;
+  }
+  a:active {
+    color: rgb(47, 12, 223);
   }
 
   img{
