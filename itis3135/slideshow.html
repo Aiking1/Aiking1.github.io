@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Gallery</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/slideshow.css">
+    <script src="scripts/IncludeHTML.js" defer></script>
+   
+</head>
+<body>
+ <header>
+    <h1>ITIS - 3135 || Invisible Kobra</h1>
+    <h2>Slideshow Gallery</h2>
+
+    <div data-include="components/header.html"></div>
+  </header>
+<main>
+
+    <div data-include="components/gallery.html"></div>
+ 
+
+</main>
+    
+<footer>
+    <div data-include="components/footer.html"></div>
+
+</footer>
+<script>
+    const slides = document.querySelectorAll(".slide");
+
+    function setSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("slide-active");
+      });
+      slides[index].classList.add("slide-active");
+    }
+  </script>
+<script src="scripts/HTMLInclude.min.js"></script>
+<script src="scripts/slideshow.js"></script>
+</body>
+</html>
