@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients portal - Piedmont Family Dentistry </title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="scripts/components.js" defer></script>
+</head>
+<body>
+    <body>
+        <div data-include="components/header_client.html"></div>
+      
+        <main>
+          <div class="login-card">
+            <h3 class="login-card3">Welcome Back valued customer</h3>
+            <form onsubmit="return handleLogin(event)">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+      
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+      
+              <button type="submit" class="login-btn">Login</button>
+            </form>
+      
+            <hr />
+            <p>New here?</p>
+            <button class="signup-btn" onclick="window.location.href='signup.html'">Create an Account</button>
+          </div>
+        </main>
+      
+        <div data-include="components/footer_client.html"></div>
+      
+        <script>
+          function handleLogin(event) {
+            event.preventDefault();
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+      
+            let users = JSON.parse(localStorage.getItem("users")) || {};
+      
+            if (users[user] && users[user] === pass) {
+              localStorage.setItem("loggedInUser", user);
+              alert("Login successful! Redirecting may take a second...");
+              window.location.href = "dashboard.html";
+            } else {
+              alert("Invalid credentials. Please retry.");
+            }
+          }
+        </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Request - Piedmont family Dentistry</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <main class="container">
+        <h2>Get intouch &amp; Request your service</h2>
+        <p class="text-center">Tell us about concerns/needs! Complete the film below. We'll get back to you to discuss your needs and schedule a consultation if necessary.</p>
+
+        <form action="#" method="POST" class="booking-form"> <!-- Action will be handled by JS/backend later -->
+
+            <fieldset>
+                <legend>Your Contact Information</legend>
+                <div class="form-group">
+                    <label for="user-name">Full Name:</label>
+                    <input type="text" id="user-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email Address:</label>
+                    <input type="email" id="user-email" name="email" required>
+                </div>
+                 <div class="form-group">
+                    <label for="user-phone">Phone Number:</label>
+                    <input type="tel" id="user-phone" name="phone" placeholder="e.g., 704-225-8555" required>
+                </div>
+            </fieldset>
+
+             <fieldset style="margin-top: 20px;">
+                <legend>Project Details</legend>
+                 <div class="form-group">
+                    <label for="service-interest">Primary Area of Interest:</label>
+                    <select id="service-interest" name="interest" required>
+                        <option value="">-- Please Select Requested Service--</option>
+                        <option value="check-ups">Dental Checkups</option>
+                        <option value="crowns">Crowns</option>
+                        <option value="dentures">Dentures</option>
+                        <option value="extractions">Extractions</option>
+                        <option value="implants">Implants</option>
+                        <option value="x-rays">X-rays</option>
+                        <option value="teeth-whitening">Teeth Whitening</option>
+                        <option value="veneers">Veneers</option>
+                        <option value="else">Else?(Describe Below)</option>
+                    </select>
+                </div>
+
+                 <div class="form-group">
+                    <label for="project-description">Brief Description of needs:</label>
+                    <textarea id="project-description" name="description" rows="6" placeholder="Please provide details need service (e.g., pain, desired service, specific issues)." required></textarea>
+                </div>
+            </fieldset>
+
+
+            <div class="text-center" style="margin-top: 20px;">
+                <button type="submit" class="button">Submit Request</button>
+            </div>
+
+        </form>
+         <p class="text-center" style="margin-top: 20px; font-size: 0.9em;">Responses may take 1-2 business days.</p>
+
+    </main>
+        <footer>
+            <div data-include="components/footer.html"></div>
+          </footer>
+        <script src="scripts/HTMLInclude.min.js"></script>
+
+    <!-- Remove jQuery/UI includes if not needed, or keep for potential future enhancements -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script> -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+    </script>
+</body>
+</html>
