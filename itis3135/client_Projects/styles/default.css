@@ -4,14 +4,19 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
     max-width: 1200px;
     margin: 0 auto;
+  
 }
 
 header {
     text-transform: uppercase;
     text-align: center; 
-    padding: 15px 32px;
+    padding: 10px 32px;
     color: #c79900;
     border-bottom: 4px solid #c5c6d0; 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+   scroll-behavior: smooth;
 }
 
 h1 {
@@ -20,10 +25,7 @@ h1 {
     color: #c79900;
 }
 
-h2, h3 {
-    text-align: center;
-    color: #c79900;
-}
+
 
 h3 a {
     color: #c79900;
@@ -190,26 +192,22 @@ a:hover {
     text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.8em;
-    color: #3d5a56; 
-    line-height: 1.3;
-}
 
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
-    width: 90%; 
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 1150px; 
 }
 
-.text-center {
+.text center {
     text-align: center;
 }
 
 .button {
     display: inline-block;
-    background-color: #5a8a84; 
+    background-color: #7aa5d2; 
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -221,13 +219,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button:hover {
-    background-color: #3d5a56;
+    background-color: #048998;
     text-decoration: none;
 }
 
 header {
     background-color: #ffffff; 
-    padding: 15px 0;
+    padding: 5px 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
@@ -240,16 +238,6 @@ header .container {
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.8em;
-    color: #3d5a56;
-}
-
-header h1 a {
-    color: inherit; 
-    text-decoration: none;
-}
 
 nav ul {
     list-style: none;
@@ -266,11 +254,10 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active { 
-    color: #e47a8d; 
+nav ul li a:hover, .active { 
+    color: #47555e; 
     text-decoration: none;
-    border-bottom: 2px solid #e47a8d;
+    border-bottom: 2px solid #47555e;
 }
 
 
@@ -310,9 +297,6 @@ main h2 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.service-item h3 {
-    margin-top: 0;
-}
 
 form {
     background-color: #fff;
@@ -331,7 +315,7 @@ form {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #3d5a56;
+    color: #7aa5d2;
 }
 
 .form-group input[type="text"],
@@ -350,3 +334,18 @@ form {
     min-height: 120px;
     resize: vertical;
 }
+
+site-header {
+   
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  

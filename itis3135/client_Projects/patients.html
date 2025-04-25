@@ -11,7 +11,7 @@
 </head>
 <body>
     <body>
-        <div data-include="components/header_client.html"></div>
+        <div data-include="components/client_header.html"></div>
       
         <main>
           <div class="login-card">
@@ -33,7 +33,7 @@
         </main>
       
         <div data-include="components/footer_client.html"></div>
-      
+        <script src="scripts/HTMLInclude.min.js"></script>
         <script>
           function handleLogin(event) {
             event.preventDefault();
@@ -51,5 +51,8 @@
             }
           }
         </script>
+   <div data-include="components/client_footer.html"></div>
+   <script src="scripts/HTMLInclude.min.js"></script>
+
 </body>
 </html>
