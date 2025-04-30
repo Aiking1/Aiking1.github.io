@@ -1,37 +1,32 @@
 
 
-
-
-let currentSlide = 0;
-
-function showSlide(index) {
-  const totalSlides = slides.length;
-  // Loop back if index is out of bounds
-  if (index >= totalSlides) {
-    currentSlide = 0;
-  } else if (index < 0) {
-    currentSlide = totalSlides - 1;
-  } else {
-    currentSlide = index;
+let slideIndex = 1;
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length){
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
   }
+showSlides(slideIndex);
 
-  slides.forEach((slide, i) => {
-    slide.classList.remove("slide-active");
-  });
-  slides[currentSlide].classList.add("slide-active");
-}
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") currentSlide(1);
-    if (e.key === "ArrowLeft") currentSlide(-1);
-  });
-
+// Next/previous controls
 function plusSlides(n) {
-  showSlide(currentSlide + n);
-}
-
-function setSlide(index) {
-  showSlide(index);
+  showSlides(slideIndex += n);
 }
 
 // Optional: Auto advance

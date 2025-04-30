@@ -6,61 +6,163 @@
     <title>Slideshow Gallery</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/default.css">
-    <script src="scripts/IncludeHTML.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
+  <style>
+  
+  main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .slideshow-container {
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+    }
+
+    .slide-active {
+      display: block;
+    }
+
+    .slide img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 97.35%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .thumbnail-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 3.5px;
+    }
+
+    .thumbnail-nav img {
+      width: 60px;
+      height: 40px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      box-sizing: border-box;
+      transition: transform 0.2s ease, border-color 0.3s ease;
+    }
+
+    .thumbnail-nav img:hover {
+      transform: scale(1.1);
+      border-color: #38220F;
+    }
+
+    .nameList {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .ai-prompts ul {
+      padding-left: 1.5rem;
+    }
+
+    .ai-prompts li {
+      margin: 0.5rem 0;
+    }
+  
+    </style>
 </head>
 <body>
-
-
-    <h2>Slideshow Gallery</h2>
-
-    <div data-include="components/header.html"></div>
- 
+  <div data-include="components/header.html"></div>
 <main>
+ <h2>Slideshow Gallery</h2>
+ <div class="container">
+  <div class="slides">
+    <div class="slide slide-active">
+      <div class="numbertext">1 / 9</div>
+      <img src="images/ice_cream.jpeg" alt="Personal size bowl of Chocolate ice cream" style="width:65%">
+      <div class="caption">I - Ice Cream</div>
+    </div>
 
-    <div class="slides">
-        <div class="slide slide-active">
-          <img src="images/ice_cream.jpeg" alt="Personal size bowl of Chocolate ice cream" />
-          <div class="caption">I - Ice Cream</div>
-        </div>
-        <div class="slide">
-          <img src="images/strawberry.jpeg" alt="Fresh Strawberries on stem"/>
-          <div class="caption">S - Strawberry</div>
-        </div>
-        <div class="slide">
-          <img src="images/alarm.jpeg" alt="Loud alarm clock sitting on dresser" />
-          <div class="caption">A - Alarm</div>
-        </div>
-        <div class="slide">
-          <img src="images/apples.jpeg" alt="Basket of fresh picked apples" />
-          <div class="caption">A - Apples</div>
-        </div>
-        <div class="slide">
-          <img src="images/candles.jpeg" alt="Lit candles providing light in the darkness" />
-          <div class="caption">C - Candles</div>
-        </div>
-        <div class="slide">
-          <img src="images/kiwi.jpeg" alt="Fresh rinsed cut kiwi" />
-          <div class="caption">K - Kiwi</div>
-        </div>
-        <div class="slide">
-            <img src="images/ice.jpeg" alt="Huge ice canyon in the South Pole">
-            <div class="caption">I - Ice Canyon</div>
-        </div>
-        <div class="slide">
-            <img src="images/nectarines.jpeg" alt="Cup filled to the brim with nectarines">
-            <div class="caption">N - Nectarines</div>
-        </div>
-        <div class="slide">
-            <img src="images/grapes.jpeg" alt="Bunches of growing green grapes on vine">
-            <div class="caption">G - Grapes</div>
-        </div>
-      </div>
+    <div class="slide">
+      <div class="numbertext">2 / 9</div>
+      <img src="images/strawberry.jpeg" alt="Fresh Strawberries on stem" style="width:65%">
+      <div class="caption">S - Strawberry</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">3 / 9</div>
+      <img src="images/alarm.jpeg" alt="Loud alarm clock sitting on dresser" style="width:65%">
+      <div class="caption">A - Alarm</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">4 / 9</div>
+      <img src="images/apples.jpeg" alt="Basket of fresh picked apples" style="width:65%">
+      <div class="caption">A - Apples</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">5 / 9</div>
+      <img src="images/candles.jpeg" alt="Lit candles providing light in the darkness" style="width:65%">
+      <div class="caption">C - Candles</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">6 / 9</div>
+      <img src="images/kiwi.jpeg" alt="Fresh rinsed cut kiwi" style="width:65%">
+      <div class="caption">K - Kiwi</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">7 / 9</div>
+      <img src="images/ice.jpeg" alt="Huge ice canyon in the South Pole" style="width:65%">
+      <div class="caption">I - Ice Canyon</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">8 / 9</div>
+      <img src="images/nectarines.jpeg" alt="Cup filled to the brim with nectarines" style="width:65%">
+      <div class="caption">N - Nectarines</div>
+    </div>
+
+    <div class="slide">
+      <div class="numbertext">9 / 9</div>
+      <img src="images/grapes.jpeg" alt="Bunches of growing green grapes on vine" style="width:65%">
+      <div class="caption">G - Grapes</div>
+    </div>
+  </div>
 
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
+
+
+     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+     <div class="caption-container">
+         <p id="caption"></p>
+     </div>
+
+   </div>
+
       <div class="thumbnail-nav">
         <img src="images/ice_cream.jpeg" alt="Ice creams" onclick="setSlide(0)">
         <img src="images/strawberry.jpeg" alt="Strawberry" onclick="setSlide(1)">
@@ -101,15 +203,15 @@
     
     </footer>
     <script>
-        const slides = document.querySelectorAll(".slide");
-    
-        function setSlide(index) {
-          slides.forEach((slide, i) => {
-            slide.classList.remove("slide-active");
-          });
-          slides[index].classList.add("slide-active");
-        }
-      </script>
+      const slides = document.querySelectorAll(".slide");
+  
+      function setSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove("slide-active");
+        });
+        slides[index].classList.add("slide-active");
+      }
+    </script>
 <script src="scripts/HTMLInclude.min.js"></script>
 <script src="scripts/slideshow.js"></script>
 </body>
